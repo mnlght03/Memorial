@@ -1,0 +1,46 @@
+.layout {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: var(--bg-primary);
+  overflow: auto;
+}
+
+.layout-container {
+  @include container;
+  
+  --left-margin: 160px;
+
+  position: relative;
+  height: 100%;
+  padding: 170px 80px 100px;
+  margin-left: var(--left-margin);
+  border: 1px solid var(--border-secondary);
+  border-top-style: none;
+  border-bottom-style: none;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (width <= 1440px) {
+    --left-margin: 0px;
+  }
+
+
+  .layout-decoration {
+    &-vertical {
+      position: absolute;
+      border: 1px solid var(--border-secondary);
+      left: 50%;
+      top: 0;
+      bottom: 0;
+    }
+
+    &-horizontal {
+      position: absolute;
+      border: 1px solid var(--border-secondary);
+      left: 0;
+      right: 0;
+      top: 50%;
+    }
+  }
+}

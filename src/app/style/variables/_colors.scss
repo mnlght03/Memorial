@@ -1,0 +1,15 @@
+:root {
+  --general-white: rgb(255 255 255); // #FFFFFF
+
+  --text-primary: rgb(66 86 122); // #42567A
+  --text-primary--disabled: rgb(66 86 122 / 40%); // #42567A 40%
+  --text-blue: rgb(56 119 238); // #3877EE
+  --text-blue--disabled: rgb(56 119 238 / 40%); // #3877EE 40%
+  --text-purple: rgb(93 95 239); // #5D5FEF
+  --text-pink: rgb(239 93 168); // #EF5DA8
+
+  --border-primary: rgb(66 86 122 / 50%); // #42567A 50%
+  --border-secondary: rgb(66 86 122 / 10%); // #42567A 10%
+
+  --bg-primary: rgb(244 245 249); // #F4F5F9
+}

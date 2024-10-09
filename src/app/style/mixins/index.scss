@@ -1,0 +1,26 @@
+@mixin container {
+  width: min(100%, var(--container-max-width, 1440px));
+  padding: 20px;
+}
+
+@mixin caption($fontSize: 14px, $leading: 120%, $weight: 400) {
+  font-weight: $weight;
+  font-size: $fontSize;
+  line-height: $leading;
+}
+
+@mixin caption-sub {
+  @include caption(25px)
+}
+
+@mixin caption-sparse {
+  @include caption(20px, 30px)
+}
+
+@mixin caption-heading {
+  @include caption(56px, 120%, 700)
+}
+
+@mixin caption-heading-lg {
+  @include caption(200px, 100%, 700) 
+}

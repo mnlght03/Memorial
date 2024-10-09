@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-prettier-scss"
+  ],
+  "rules": {
+    "custom-property-empty-line-before": null,
+    "custom-property-pattern": null,
+    "selector-class-pattern": null,
+    "scss/at-mixin-pattern": null
+  }
+}

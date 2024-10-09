@@ -1,0 +1,42 @@
+.arrow-button {
+  --size: 40px;
+  
+  width: var(--size);
+  height: var(--size);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-primary);
+  border-radius: 50%;
+  color: var(--text-primary);
+  user-select: none;
+
+  &--right {
+    transform: rotate(180deg)
+  }
+
+  &:disabled {
+    color: var(--text-primary--disabled);
+    border-color: var(--border-secondary);
+  }
+
+  &--lg {
+    --size: 50px;
+  }
+
+  &--sm {
+    --size: 25px;
+  }
+
+  &--swiper {
+    box-shadow: var(--swiper-button-shadow);
+    color: var(--text-blue);
+    background: var(--general-white);
+    border: none;
+  }
+
+  &__icon {
+    width: 14px;
+    height: 14px;
+  }
+}

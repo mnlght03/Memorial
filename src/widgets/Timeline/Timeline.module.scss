@@ -1,0 +1,57 @@
+.timeline {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 56px;
+}
+
+.timeline-swiper {
+  width: 100%;
+  display: flex;
+  gap: 80px;
+
+  &__item {
+    width: 320px;
+  }
+}
+
+.timeline__arrow-button {
+  position: absolute;
+
+  --offset: -60px;
+
+  &--left {
+    left: var(--offset);
+  }
+
+  &--right {
+    right: var(--offset);
+  }
+
+  &:disabled {
+    display: none;
+  }
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 320px;
+  flex-shrink: 0;
+  text-wrap: wrap;
+
+  &__title {
+    @include caption-sub;
+
+    color: var(--text-blue);
+  }
+
+  &__description {
+    @include caption-sparse;
+
+    color: var(--text-primary);
+    max-height: 90px;
+    overflow: auto;
+  }
+}

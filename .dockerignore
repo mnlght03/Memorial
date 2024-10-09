@@ -1,0 +1,10 @@
+.husky/
+.vscode/
+node_modules/
+dist/
+docs/
+Dockerfile
+.docker*
+.git*
+.env*
+*.md

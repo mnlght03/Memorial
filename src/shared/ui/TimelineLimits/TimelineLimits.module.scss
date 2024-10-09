@@ -1,0 +1,15 @@
+.timeline-limits {
+  @include caption-heading-lg;
+
+  display: flex;
+  gap: 60px;
+  position: absolute;
+
+  &__from {
+    color: var(--text-blue);
+  }
+
+  &__to {
+    color: var(--text-pink);
+  }
+}
