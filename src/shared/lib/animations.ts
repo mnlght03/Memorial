@@ -1,4 +1,4 @@
 /**
  * Длительность анимаций в секундах. Используется для gsap анимаций.
  */
-export const animationDuration = 1;
+export const mainAnimationDuration = 1;

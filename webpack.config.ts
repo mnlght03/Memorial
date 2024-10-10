@@ -3,12 +3,15 @@ import path from 'path';
 import { buildWebpackConfig } from './config/build/buildWebpackConfig';
 import { BuildPaths } from './config/build/types/config';
 
+// eslint-disable-next-line no-undef
+const baseDir = __dirname || path.dirname('');
+
 export default (env: any) => {
   const paths: BuildPaths = {
-    entry: path.resolve(__dirname, 'src', 'index.tsx'),
-    build: path.resolve(__dirname, 'dist'),
-    html: path.resolve(__dirname, 'public', 'index.html'),
-    src: path.resolve(__dirname, 'src'),
+    entry: path.resolve(baseDir, 'src', 'index.tsx'),
+    build: path.resolve(baseDir, 'dist'),
+    html: path.resolve(baseDir, 'public', 'index.html'),
+    src: path.resolve(baseDir, 'src'),
   };
 
   const mode = env.mode || 'development';

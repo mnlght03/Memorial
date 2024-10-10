@@ -3,7 +3,7 @@ import gsap from 'gsap';
 
 import { createClsModuleScope } from '@/shared/lib/classnames';
 import * as style from './TimelineLimits.module.scss';
-import { animationDuration } from '@/shared/lib/animations';
+import { mainAnimationDuration } from '@/shared/lib/animations';
 
 const cls = createClsModuleScope(style);
 
@@ -30,7 +30,7 @@ const TimelineLimits = ({ from, to }: Props) => {
           textContent: from,
           ease: 'power1.in',
           snap: { textContent: 1 },
-          duration: animationDuration,
+          duration: mainAnimationDuration,
           onComplete: () => setPrevFrom(from),
         },
       );
@@ -44,7 +44,7 @@ const TimelineLimits = ({ from, to }: Props) => {
           textContent: to,
           ease: 'power1.in',
           snap: { textContent: 1 },
-          duration: animationDuration,
+          duration: mainAnimationDuration,
           onComplete: () => setPrevTo(to),
         },
       );

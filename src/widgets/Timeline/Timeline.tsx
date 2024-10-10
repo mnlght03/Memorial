@@ -11,7 +11,7 @@ import * as style from './Timeline.module.scss';
 
 import TimelineItem, { type TimelineItemProps } from './TimelineItem';
 import ArrowButton from '@/shared/ui/ArrowButton/ArrowButton';
-import { animationDuration } from '@/shared/lib/animations';
+import { mainAnimationDuration } from '@/shared/lib/animations';
 
 const cls = createClsModuleScope(style);
 
@@ -26,7 +26,7 @@ const Timeline = ({ items }: Props) => {
     const ctx = gsap.context(() => {
       gsap.from(timelineRef.current, {
         opacity: 0,
-        duration: animationDuration,
+        duration: mainAnimationDuration,
         y: 100,
       });
     });

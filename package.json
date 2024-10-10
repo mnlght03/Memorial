@@ -7,15 +7,15 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint --ext ts,tsx src/*",
     "lint:fix": "eslint --ext ts,tsx src/* --fix",
-    "build:dev": "webpack --env port=3000 --env mode=development",
-    "build": "webpack --env port=3000 --env mode=production",
+    "build:dev": "webpack --env mode=development",
+    "build": "webpack --env mode=production",
     "dev": "webpack serve",
     "prepare": "husky"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@9.7.0+sha512.dc09430156b427f5ecfc79888899e1c39d2d690f004be70e05230b72cb173d96839587545d09429b55ac3c429c801b4dc3c0e002f653830a420fa2dd4e3cf9cf",
+  "packageManager": "pnpm@9.7.0",
   "devDependencies": {
     "@svgr/webpack": "^8.1.0",
     "@types/node": "^22.7.5",

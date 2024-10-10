@@ -8,7 +8,7 @@ import TimelinePickerItem from './TimelinePickerItem';
 
 import { TimelineLimits } from '@/shared/ui/TimelineLimits';
 import { Timeline } from '@/entities/timeline/model';
-import { animationDuration } from '@/shared/lib/animations';
+import { mainAnimationDuration } from '@/shared/lib/animations';
 
 const cls = createClsModuleScope(style);
 
@@ -35,28 +35,26 @@ const TimelinePicker = ({
     const angleOffset = -60;
     const rotation = -(360 / timelines.length) * (active - 1) + angleOffset;
 
-    const ctx = gsap.context(() => {
+    gsap.context(() => {
       gsap.to(timelineCircle.current, {
         rotation: rotation,
-        duration: animationDuration,
+        duration: mainAnimationDuration,
         ease: 'power1.inOut',
         transformOrigin: 'center center',
       });
 
       timelineItems.current.forEach((_, idx) => {
-        const buttonAngle = (360 / timelines.length) * idx + rotation;
+        const itemRotation = (360 / timelines.length) * idx + rotation;
         gsap.to(timelineItems.current[idx], {
-          rotation: -buttonAngle,
-          duration: 1,
-          ease: 'sine.inOut',
+          rotation: -itemRotation,
+          duration: mainAnimationDuration,
+          ease: 'power1.inOut',
           transformOrigin: 'center center',
         });
       });
     });
 
-    return () => {
-      ctx.revert();
-    };
+    // Не нужно вызывать context.revert(), чтобы позиция окружности сохранялось между рендерами.
   }, [active, timelines.length]);
 
   return (
